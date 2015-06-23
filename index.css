@@ -1,4 +1,3 @@
-
 article.tabs
 {
 	position: relative;
@@ -22,11 +21,19 @@ article.tabs section
 	z-index: 0;
 	color: black;
 }
+article.tabs section .tab-content 
+{
+	display: none;
+}
 article.tabs section:last-child
 {
 	z-index: 1;
 	color: #333;
 	background-color: #fff;
+}
+article.tabs section:last-child .tab-content
+{
+	display: block;
 }
 article.tabs section h2
 {
@@ -74,10 +81,18 @@ article.tabs section:target h2
 	background-color: #fff;
 	z-index: 2;
 }
+article.tabs section:target .tab-content
+{
+	display: block;
+}
 article.tabs section:target ~ section:last-child h2
 {
 	color: #999;
 	background-color: #ddd;
+}
+article.tabs section:target ~ section:last-child .tab-content
+{
+	display: none;
 }
 article.tabs section,
 article.tabs section h2
